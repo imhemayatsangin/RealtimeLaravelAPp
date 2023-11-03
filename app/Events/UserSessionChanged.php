@@ -13,13 +13,15 @@ use Illuminate\Queue\SerializesModels;
 class UserSessionChanged implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
-
+    public $message;
+    public $type;
     /**
      * Create a new event instance.
      */
-    public function __construct()
+    public function __construct($message, $type)
     {
-        //
+        $this->message = $message;
+        $this->type = $type;
     }
 
     /**
@@ -30,7 +32,7 @@ class UserSessionChanged implements ShouldBroadcast
     public function broadcastOn(): array
     {
         return [
-            new PrivateChannel('channel-name'),
+            new PrivateChannel('notifications'),
         ];
     }
 }

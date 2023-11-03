@@ -1,7 +1,7 @@
 import Echo from 'laravel-echo';
 import './bootstrap';
 
-window.Echo.channel('notifications').listen('UserSessionChanged', (e) => {
+window.Echo.private('notifications').listen('UserSessionChanged', (e) => {
 
 const notificationMessage = document.getElementById('notification');
 

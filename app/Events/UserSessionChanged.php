@@ -32,10 +32,9 @@ class UserSessionChanged implements ShouldBroadcast
      */
     public function broadcastOn(): array
     {
-        Log::info($this->message);
-        Log::info($this->type);
+
         return [
-            new Channel('notifications'),  //we made it public
+            new PrivateChannel('notifications'),  //made it private so that only authenticated user should see the notifications
         ];
     }
 }

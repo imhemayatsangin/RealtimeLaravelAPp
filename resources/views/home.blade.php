@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card shadow rounded">
-                <div class="card-header">{{ __('Wellcome Page') }}</div>
+                <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('Wellcome to realtime App') }}
+                    {{ __('You are logged in As')  }} <b> {{ Auth::user()->name }}</b>
                 </div>
             </div>
         </div>

@@ -34,8 +34,6 @@ users.forEach((user,index) => {
     
 });
 
-
-
 });
 
 </script>

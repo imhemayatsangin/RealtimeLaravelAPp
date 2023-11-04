@@ -36,6 +36,31 @@ users.forEach((user,index) => {
 
 });
 
+
+//     Echo.channel('users')
+//     .listen('UserCreated', (e)=>{
+//      const UserElement=document.getElementById('users');
+//    let element= document.createElement('li');
+//     element.setAttribute('id',e.user.id);
+//     element.innerHTML=`${e.user.name} ${e.user.email}`;
+//     UserElement.appendChild(element);
+
+//     })
+  
+//     .listen('UserUpdated', (e)=>{
+//         let element=document.getElementById(e.user.id);
+//         element.innerHTML=`${e.user.name} ${e.user.email}`;
+
+//     })
+ 
+//     .listen('UserDeleted', (e)=>{
+//         let element=document.getElementById(e.user.id);
+//         element.parentNode.removeChild(element);
+
+//     });
+
+
+
 </script>
 
 
